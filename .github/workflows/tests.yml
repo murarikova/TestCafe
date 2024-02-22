@@ -1,4 +1,4 @@
-name: MUCH WebUI Tests POC
+name: Run TestCafe tests POC
 on:
   push:
     branches: [master]
@@ -10,9 +10,9 @@ jobs:
     steps:
       - name: Check out the repository
         uses: actions/checkout@v1
-      - name: Install TestCafe
-        run: npm install -g testcafe
+      - name: Check node.js version
+        uses: actions/setup-node@v1
       - name: Run tests
-        uses: murarikova/TestCafe
+        uses: murarikova/TestCafe@latest
         with: 
           args: "chrome tests"
