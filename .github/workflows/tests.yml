@@ -14,5 +14,4 @@ jobs:
         run: npm install -g testcafe
       - name: Run tests
         uses: murarikova/TestCafe@latest
-          with:
-          args: "chrome tests"
+        run: testcafe chrome tests
