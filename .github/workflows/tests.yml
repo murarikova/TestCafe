@@ -15,4 +15,4 @@ jobs:
       - name: Run tests
         run: murarikova/TestCafe
         with: 
-          args: "chrome tests"
+          args: chrome tests
