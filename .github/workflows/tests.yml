@@ -13,4 +13,4 @@ jobs:
       - name: Install TestCafe
         run: npm install -g testcafe
       - name: Run tests
-        run: testcafe chrome tests
+        uses: testcafe chrome tests
