@@ -1,4 +1,4 @@
-name: Run TestCafe tests 
+name: MUCH WebUI Tests POC
 on:
   push:
     branches: [master]
@@ -7,13 +7,12 @@ jobs:
   test:
     name: Run TestCafe Tests
     runs-on: windows-latest
+    runs-on: node-latest
     steps:
       - name: Check out the repository
         uses: actions/checkout@v1
-      - name: Check node.js version
-        uses: actions/setup-node@v1
-      - name: testcafe action workflow
-        uses: ./
+      - name: Run tests
+        uses: actions/checkout@v2
         with:
-          args: chrome 
+          args: chrome tests
 
