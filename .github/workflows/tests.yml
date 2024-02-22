@@ -1,4 +1,4 @@
-name: Run TestCafe tests POC
+name: Run TestCafe tests 
 on:
   push:
     branches: [master]
@@ -12,6 +12,8 @@ jobs:
         uses: actions/checkout@v1
       - name: Check node.js version
         uses: actions/setup-node@v1
-      - name: Run tests
-        run: murarikova/TestCafe chrome tests
+      - name: testcafe action workflow
+        uses: ./
+        with:
+          args: chrome 
 
