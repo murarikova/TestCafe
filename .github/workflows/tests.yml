@@ -9,8 +9,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Check out the repository
-        uses: actions/checkout
+        uses: actions/checkout@v1
       - name: Install TestCafe
         run: npm install -g testcafe
       - name: Run tests
-        uses: testcafe chrome tests
+        uses: murarikova/TestCafe@latest
+          with:
+          args: "chrome tests"
