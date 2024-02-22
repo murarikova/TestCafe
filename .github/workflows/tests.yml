@@ -13,6 +13,6 @@ jobs:
       - name: Check node.js version
         uses: actions/setup-node@v1
       - name: Run tests
-        uses: murarikova/TestCafe@latest
+        uses: murarikova/TestCafe
         with: 
           args: "chrome tests"
